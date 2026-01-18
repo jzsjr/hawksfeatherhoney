@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawk's Feather Honey | Cherry Log, GA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --honey-gold: #dfa630;
+            --deep-brown: #3e2723;
+            --off-white: #faf9f6;
+            --text-grey: #4a4a4a;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-grey);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--deep-brown);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            /* Pointing to your local 'images' folder. */
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), 
+                        url('images/mountains.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* --- ABOUT SECTION --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .about-text {
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* --- PHOTO GALLERY --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05); 
+        }
+
+        .caption {
+            padding: 15px;
+            background: white;
+            border-top: 4px solid var(--honey-gold);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--deep-brown);
+            color: var(--off-white);
+            text-align: center;
+            padding: 3rem 20px;
+        }
+        
+        .contact-box {
+            border: 1px solid var(--honey-gold);
+            padding: 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Hawk's Feather Honey</h1>
+            <p>Pure. Wild. Mountain Grown.</p>
+            <p style="font-size: 1.1rem; margin-top: 10px; opacity: 0.95; font-weight: 600;">Cherry Log, Georgia</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="about-text">
+            <h2>From the Blue Ridge Mountains</h2>
+            <br>
+            <p>
+                Nestled in the heart of Cherry Log, Georgia, our bees work hard among the mountain laurel and wildflowers. 
+                Hawk's Feather Honey is small-batch, raw, and unfiltered—exactly the way nature intended. 
+                We believe in sustainable beekeeping that honors the land and produces the richest golden honey you've ever tasted.
+            </p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 3rem 0;">
+
+        <h2>Life at the Apiary</h2>
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <img src="images/bees.jpg" alt="Bees on honeycomb">
+                <div class="caption">
+                    <h3>Our Hard Workers</h3>
+                    <p>Italian honeybees on the comb.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/hives.jpg" alt="Beehives in the field">
+                <div class="caption">
+                    <h3>The Apiary</h3>
+                    <p>Hives resting in the Cherry Log shade.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/honey.jpg" alt="Jar of honey">
+                <div class="caption">
+                    <h3>Liquid Gold</h3>
+                    <p>Freshly harvested spring wildflower.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h2>Connect With Us</h2>
+        <p>Interested in our latest harvest?</p>
+        
+        <div class="contact-box">
+            <p><strong>Hawk's Feather Honey</strong></p>
+            <p>Cherry Log, GA 30522</p>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Hawk's Feather Honey</p>
+    </footer>
+
+</body>
+</html>
