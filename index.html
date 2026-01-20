@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* --- RESET & VARIABLES --- */
         :root {
             --honey-gold: #dfa630;
             --deep-brown: #3e2723;
@@ -29,9 +28,7 @@
             color: var(--deep-brown);
         }
 
-        /* --- HERO SECTION --- */
         .hero {
-            /* Pointing to your local 'images' folder. */
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), 
                         url('images/mountains.jpg');
             background-size: cover;
@@ -59,7 +56,6 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
-        /* --- ABOUT SECTION --- */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -72,7 +68,6 @@
             margin: 0 auto 3rem auto;
         }
 
-        /* --- PHOTO GALLERY --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -85,6 +80,7 @@
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: white;
         }
 
         .gallery-item img {
@@ -101,11 +97,9 @@
 
         .caption {
             padding: 15px;
-            background: white;
             border-top: 4px solid var(--honey-gold);
         }
 
-        /* --- FOOTER --- */
         footer {
             background-color: var(--deep-brown);
             color: var(--off-white);
@@ -120,7 +114,6 @@
             margin-top: 1rem;
         }
 
-        /* --- MOBILE TWEAKS --- */
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.5rem; }
         }
@@ -174,7 +167,9 @@
                     <h3>Liquid Gold</h3>
                     <p>Freshly harvested spring wildflower.</p>
                 </div>
-                <div class="gallery-item">
+            </div>
+
+            <div class="gallery-item">
                 <img src="images/equipment.jpg" alt="Beekeeping tools">
                 <div class="caption">
                     <h3>The Craft</h3>
