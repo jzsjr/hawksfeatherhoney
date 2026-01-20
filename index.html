@@ -133,27 +133,33 @@
             display: block;
         }
 
-        /* --- FOOTER --- */
+/* --- FOOTER --- */
         footer {
             background-color: var(--deep-brown);
             color: var(--off-white);
-            text-align: center;
-            padding: 3rem 20px;
+            padding: 4rem 20px;
         }
 
-        /* Logo styling */
-        .footer-logo {
-            width: 80px;
-            height: auto;
-            margin-bottom: 1.5rem;
-            display: inline-block;
+        /* This container aligns the address and logo side-by-side */
+        .footer-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px; /* Space between the box and the logo */
+            flex-wrap: wrap; /* Allows stacking on mobile phones */
         }
         
         .contact-box {
             border: 1px solid var(--honey-gold);
             padding: 2rem;
-            display: inline-block;
-            margin-top: 0;
+            text-align: center;
+            min-width: 250px;
+        }
+
+        .footer-logo {
+            width: 140px; /* Adjust size as needed */
+            height: auto;
+            /* Filter removed so the logo isn't whited out */
         }
 
         @media (max-width: 768px) {
@@ -266,19 +272,23 @@
     </section>
 
     <footer>
-        <img src="images/hawksfeather_logo.png" alt="Hawk's Feather Honey NAHBE Winning Logo" class="footer-logo">
-        
-        <div>
+        <div class="footer-flex">
             <div class="contact-box">
-                <p><strong>Hawk's Feather Honey</strong></p>
+                <p><strong>Hawk's Feather Honey™</strong></p>
                 <p>Cherry Log, GA 30522</p>
             </div>
+
+            <img src="images/hawksfeather_logo.png" alt="Hawk's Feather Honey NAHBE Award Winning Logo" class="footer-logo">
         </div>
-        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Hawk's Feather Honey</p>
+
+        <p style="margin-top: 3rem; font-size: 0.8rem; opacity: 0.6; text-align: center;">
+            &copy; 2026 Hawk's Feather Honey
+        </p>
     </footer>
 
 </body>
 </html>
+
 
 
 
