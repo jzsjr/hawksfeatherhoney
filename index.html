@@ -108,7 +108,7 @@
             padding: 4rem 20px;
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
-            margin: 4rem 0 0 0; /* Space above, flush with footer below */
+            margin: 4rem 0 0 0;
         }
 
         .awards-grid {
@@ -140,12 +140,22 @@
             text-align: center;
             padding: 3rem 20px;
         }
+
+        /* Logo styling */
+        .footer-logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            /* Inverts black logo to white for dark background */
+            filter: invert(1) brightness(2);
+            opacity: 0.9;
+        }
         
         .contact-box {
             border: 1px solid var(--honey-gold);
             padding: 2rem;
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 0;
         }
 
         @media (max-width: 768px) {
@@ -258,15 +268,20 @@
     </section>
 
     <footer>
-        <div class="contact-box">
-            <p><strong>Hawk's Feather Honey</strong></p>
-            <p>Cherry Log, GA 30522</p>
+        <img src="images/hawksfeather_logo.png" alt="Hawk's Feather Honey NAHBE Winning Logo" class="footer-logo">
+        
+        <div>
+            <div class="contact-box">
+                <p><strong>Hawk's Feather Honey</strong></p>
+                <p>Cherry Log, GA 30522</p>
+            </div>
         </div>
         <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Hawk's Feather Honey</p>
     </footer>
 
 </body>
 </html>
+
 
 
 
