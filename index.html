@@ -66,38 +66,7 @@
 
         .about-text {
             max-width: 700px;
-            margin: 0 auto 3rem auto;
-        }
-
-        /* --- AWARDS SECTION --- */
-        .awards-section {
-            background-color: #ffffff;
-            padding: 4rem 20px;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-            margin: 2rem 0;
-        }
-
-        .awards-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 2rem auto 0 auto;
-        }
-
-        .award-item {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-        }
-
-        .award-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
+            margin: 0 auto 1rem auto;
         }
 
         /* --- GALLERY --- */
@@ -133,6 +102,38 @@
             border-top: 4px solid var(--honey-gold);
         }
 
+        /* --- AWARDS SECTION --- */
+        .awards-section {
+            background-color: #ffffff;
+            padding: 4rem 20px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            margin: 4rem 0 0 0; /* Space above, flush with footer below */
+        }
+
+        .awards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 2rem auto 0 auto;
+        }
+
+        .award-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .award-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* --- FOOTER --- */
         footer {
             background-color: var(--deep-brown);
             color: var(--off-white);
@@ -172,36 +173,9 @@
                 We believe in sustainable beekeeping that honors the land and produces the richest amber honey you've ever tasted.
             </p>
         </div>
-    </section>
 
-    <section class="awards-section">
-        <div class="container" style="padding: 0;">
-            <h2>Recognitions & Honors</h2>
-            <div class="awards-grid">
-                
-                <div class="award-item">
-                    <span class="award-icon">🏅</span>
-                    <h3>Blue Ribbon</h3>
-                    <p>2025 Georgia Mountain Fair: Best Wildflower Honey</p>
-                </div>
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 3rem 0;">
 
-                <div class="award-item">
-                    <span class="award-icon">🎖️</span>
-                    <h3>First Place</h3>
-                    <p>Blue Ridge Beekeepers Honey Show: Dark Amber Division</p>
-                </div>
-
-                <div class="award-item">
-                    <span class="award-icon">🏆</span>
-                    <h3>Best in Show</h3>
-                    <p>North Georgia State Fair: Traditional Harvest</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
         <h2>Life at the Apiary</h2>
         <div class="gallery-grid">
             
@@ -253,6 +227,33 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="awards-section">
+        <div class="container" style="padding: 0;">
+            <h2>Recognitions & Honors</h2>
+            <div class="awards-grid">
+                
+                <div class="award-item">
+                    <span class="award-icon">🏅</span>
+                    <h3>Blue Ribbon</h3>
+                    <p>2025 Georgia Mountain Fair: Best Wildflower Honey</p>
+                </div>
+
+                <div class="award-item">
+                    <span class="award-icon">🎖️</span>
+                    <h3>First Place</h3>
+                    <p>Blue Ridge Beekeepers Honey Show: Dark Amber Division</p>
+                </div>
+
+                <div class="award-item">
+                    <span class="award-icon">🏆</span>
+                    <h3>Best in Show</h3>
+                    <p>North Georgia State Fair: Traditional Harvest</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
