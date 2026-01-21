@@ -42,8 +42,8 @@
     text-align: center;
     color: white;
     padding: 20px;
- /* ADD THIS LINE: Controls the speed of the fade (2 seconds) */
-    transition: background-image 2s ease-in-out;
+ /* ADD THIS LINE: Controls the speed of the fade (4 seconds) */
+    transition: background-image 4s ease-in-out;
 }
 
         .hero-content h1 {
@@ -316,14 +316,15 @@
         heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('images/hero/${nextImage}')`;
     }
 
-    // Change image every 7000 milliseconds (7 seconds)
-    setInterval(changeImage, 7000);
+    // Change image every 15000 milliseconds (15 seconds)
+    setInterval(changeImage, 15000);
 
     // Run once immediately on load so the first image shows up
     heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('images/hero/${images[0]}')`;
 </script>
 </body>
 </html>
+
 
 
 
