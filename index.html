@@ -42,6 +42,8 @@
     text-align: center;
     color: white;
     padding: 20px;
+ /* ADD THIS LINE: Controls the speed of the fade (2 seconds) */
+    transition: background-image 2s ease-in-out;
 }
 
         .hero-content h1 {
@@ -169,6 +171,12 @@
     </style>
 </head>
 <body>
+ <div style="display:none;">
+    <img src="images/hero/mountains.jpg">
+    <img src="images/hero/queenandbees.jpg">
+    <img src="images/hero/queen.jpg">
+    <img src="images/hero/cathy_beekeeping.jpg">
+</div>
 
     <header class="hero">
         <div class="hero-content">
@@ -287,25 +295,36 @@
         </p>
     </footer>
 <script>
-    // 1. List the filenames of the pictures in your directory
-    const heroImages = [
+    // 1. List your image filenames
+    const images = [
         'mountains.jpg',
         'queenandbees.jpg',
         'queen.jpg',
-        'cathy_beekeeping.jpg',
+        'cathy_beekeeping.jpg'
     ];
 
-    // 2. Pick a random number based on how many images are in the list
-    const randomIndex = Math.floor(Math.random() * heroImages.length);
-    const selectedImage = heroImages[randomIndex];
-
-    // 3. Apply the chosen image to the Hero section
-    // Assuming your images are in a folder named 'images/hero/'
+    let currentIndex = 0;
     const heroSection = document.querySelector('.hero');
-    heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('images/hero/${selectedImage}')`;
+
+    function changeImage() {
+        // Increment the index, then reset to 0 if it hits the end of the list
+        currentIndex = (currentIndex + 1) % images.length;
+        
+        const nextImage = images[currentIndex];
+        
+        // Apply the new image with the overlay
+        heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('images/hero/${nextImage}')`;
+    }
+
+    // Change image every 7000 milliseconds (7 seconds)
+    setInterval(changeImage, 7000);
+
+    // Run once immediately on load so the first image shows up
+    heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('images/hero/${images[0]}')`;
 </script>
 </body>
 </html>
+
 
 
 
