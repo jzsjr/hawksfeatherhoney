@@ -30,19 +30,19 @@
         }
 
         /* --- HERO --- */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), 
-                        url('images/mountains.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 90vh; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
+.hero {
+    /* We removed the static background image here */
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)); 
+    background-size: cover;
+    background-position: center;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 
         .hero-content h1 {
             font-size: 3.5rem;
@@ -286,9 +286,26 @@
             &copy; 2026 Hawk's Feather Honey™
         </p>
     </footer>
+<script>
+    // 1. List the filenames of the pictures in your directory
+    const heroImages = [
+        'mountains.jpg',
+        'queenandbees.jpg',
+        'queen.jpg',
+    ];
 
+    // 2. Pick a random number based on how many images are in the list
+    const randomIndex = Math.floor(Math.random() * heroImages.length);
+    const selectedImage = heroImages[randomIndex];
+
+    // 3. Apply the chosen image to the Hero section
+    // Assuming your images are in a folder named 'images/hero/'
+    const heroSection = document.querySelector('.hero');
+    heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('images/hero/${selectedImage}')`;
+</script>
 </body>
 </html>
+
 
 
 
